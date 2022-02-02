@@ -1,0 +1,27 @@
+{
+	"name": "graph-bridge",
+	"version": "0.1.0",
+	"description": "ArangoDB GraphQL API microservice",
+	"repository": "https://github.com/AkaiaIO/gql-bridge.git",
+	"author": "Rin Akaia <k@rina.wtf>",
+	"license": "MIT",
+	"private": true,
+	"scripts": {
+		"re:watch": "rescript build -with-deps -w",
+		"re:clean": "rescript clean -with-deps",
+		"re:build": "rescript build -with-deps",
+		"re:format": "rescript format -all",
+		"build": "yarn re:build && rollup -c && yarn re:clean"
+	},
+	"dependencies": {
+		"graphql": "^16.3.0"
+	},
+	"devDependencies": {
+		"@ampproject/rollup-plugin-closure-compiler": "^0.27.0",
+		"@rollup/plugin-node-resolve": "^13.1.3",
+		"@ryyppy/rescript-promise": "^2.1.0",
+		"rescript": "^9.1.3",
+		"rollup": "^2.66.1",
+		"rollup-plugin-filesize": "^9.1.2"
+	}
+}
